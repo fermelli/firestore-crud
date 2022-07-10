@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>CRUD Materias</title>
+	</head>
+	<body>
+		<header class="cabecera">
+			<div class="contenedor">
+				<h1 class="cabecera__titulo">Gestion de Materias</h1>
+			</div>
+		</header>
+
+		<main>
+			<div class="contenedor">
+				<button id="btn-nuevo" class="btn-nuevo">Nuevo</button>
+
+				<div class="tabla-responsiva">
+					<table class="tabla">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Sigla</th>
+								<th>Nombre</th>
+								<th>Contenido</th>
+								<th>Profesor</th>
+								<th>Curso</th>
+								<th colspan="2">Acciones</th>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							<tr>
+								<td colspan="8">
+									<span class="mensaje">Cargando...</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+
+		<div class="modal__fondo" id="modal">
+			<div class="modal">
+				<div class="modal_cabeza">
+					<h2 class="modal__titulo" id="modal-titulo">
+						Formulario Materia
+					</h2>
+					<button class="modal__cerrar" id="btn-cerrar">
+						&times;
+					</button>
+				</div>
+				<div class="modal__cuerpo">
+					<form id="form">
+						<input type="hidden" name="id" id="id" />
+
+						<label class="form__label" for="sigla">Sigla</label>
+						<input
+							class="form__input"
+							type="text"
+							name="sigla"
+							id="sigla"
+							placeholder="Sigla"
+							required
+						/>
+
+						<label class="form__label" for="nombre"
+							>Nombre materia</label
+						>
+						<input
+							class="form__input"
+							type="text"
+							name="nombre"
+							id="nombre"
+							placeholder="Nombre"
+							required
+						/>
+
+						<label class="form__label" for="contenido"
+							>Contenido</label
+						>
+						<textarea
+							class="form__textarea"
+							name="contenido"
+							id="contenido"
+							placeholder="Contenido"
+							rows="5"
+							required
+						></textarea>
+
+						<label class="form__label" for="profesor"
+							>Profesor</label
+						>
+						<input
+							class="form__input"
+							type="text"
+							name="profesor"
+							id="profesor"
+							placeholder="Profesor"
+							required
+						/>
+
+						<label class="form__label" for="curso">Curso</label>
+						<input
+							class="form__input"
+							type="text"
+							name="curso"
+							id="curso"
+							placeholder="Curso"
+							required
+						/>
+
+						<input
+							class="form__submit"
+							type="submit"
+							id="submit"
+							value="Guardar"
+						/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="main.js"></script>
+	</body>
+</html>
